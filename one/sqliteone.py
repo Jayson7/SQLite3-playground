@@ -58,7 +58,7 @@ c = connection.cursor()
  
 #   some looping with fetchall ***********************
 
-databases = c.fetchall()
+# databases = c.fetchall()
 
 # for i in databases:
 #     mane =i
@@ -130,19 +130,19 @@ databases = c.fetchall()
 #     print(result)
 
 # more update
-c.execute("UPDATE   customersinfo SET first_name = 'geek' WHERE rowid= 5 ")
-c.execute("SELECT rowid, * FROM    customersinfo")
+# c.execute("UPDATE   customersinfo SET first_name = 'geek' WHERE rowid= 5 ")
+# c.execute("SELECT rowid, * FROM    customersinfo")
 
-databases = c.fetchall()
+# databases = c.fetchall()
 
-print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
-print("-----------------" + '\t-------------------')
+# print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
+# print("-----------------" + '\t-------------------')
 
-for i in databases:
-    # num = str(i[2])
-    t =  "{}. {}  -  {} \t {}"
-    result = t.format(i[0], i[1], i[2], i[3] )
-    print(result)
+# for i in databases:
+#     # num = str(i[2])
+#     t =  "{}. {}  -  {} \t {}"
+#     result = t.format(i[0], i[1], i[2], i[3] )
+#     print(result)
 
 
 
