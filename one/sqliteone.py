@@ -38,7 +38,7 @@ c = connection.cursor()
 
 
 # get all data **********************
-c.execute("SELECT rowid, * FROM    customersinfo")
+# c.execute("SELECT rowid, * FROM    customersinfo")
 # print(c.fetchall())
 
 # fomat results using fetchone ********************
@@ -77,15 +77,72 @@ databases = c.fetchall()
 
 # Primary keys 
 
+# print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
+# print("-----------------" + '\t-------------------')
+
+# for i in databases:
+#     num = str(i[2])
+#     t =  "{}. {}  -  {} \t {}"
+#     result = t.format(i[0], i[1], i[2], i[3] )
+#     print(result)
+
+# looping
+# c.execute("SELECT  * FROM    customersinfo WHERE rowid= 4 ")
+
+# databases = c.fetchall()
+
+# print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
+# print("-----------------" + '\t-------------------')
+
+# for i in databases:
+#     # num = str(i[2])
+#     t =  "{}. {}  -  {} \t {}"
+#     result = t.format(i[0], i[1], i[2], i[3] )
+#     print(result)
+
+# looping ********************************************
+# c.execute("SELECT  * FROM    customersinfo WHERE last_name= 'jayson' ")
+
+# databases = c.fetchall()
+
+# print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
+# print("-----------------" + '\t-------------------')
+
+# for i in databases:
+#     # num = str(i[2])
+#     t =  "{}. {}  -  {} \t {}"
+#     result = t.format(i[0], i[1], i[2], i[3] )
+#     print(result)
+
+# Update ********************************************
+# c.execute("UPDATE   customersinfo SET first_name = 'geek' WHERE last_name= 'jayson' ")
+# c.execute("SELECT rowid, * FROM    customersinfo")
+
+# databases = c.fetchall()
+
+# print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
+# print("-----------------" + '\t-------------------')
+
+# for i in databases:
+#     # num = str(i[2])
+#     t =  "{}. {}  -  {} \t {}"
+#     result = t.format(i[0], i[1], i[2], i[3] )
+#     print(result)
+
+# more update
+c.execute("UPDATE   customersinfo SET first_name = 'geek' WHERE last_name= 'jayson' ")
+c.execute("SELECT rowid, * FROM    customersinfo")
+
+databases = c.fetchall()
+
 print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
 print("-----------------" + '\t-------------------')
 
 for i in databases:
-    num = str(i[2])
+    # num = str(i[2])
     t =  "{}. {}  -  {} \t {}"
     result = t.format(i[0], i[1], i[2], i[3] )
     print(result)
-
 
 
 
