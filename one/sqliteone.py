@@ -145,20 +145,20 @@ c = connection.cursor()
 #     print(result)
 
 # delete a data**************************************
-c.execute("DELETE   customersinfo  WHERE rowid= 5 ")
-c.execute("SELECT rowid, * FROM    customersinfo")
+# c.execute("DELETE  from customersinfo  WHERE rowid= 5 ")
+# c.execute("SELECT rowid, * FROM    customersinfo")
 
-print("done")
-databases = c.fetchall()
+# print("done")
+# databases = c.fetchall()
 
-print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
-print("-----------------" + '\t-------------------')
+# print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
+# print("-----------------" + '\t-------------------')
 
-for i in databases:
-    # num = str(i[2])
-    t =  "{}. {}  -  {} \t {}"
-    result = t.format(i[0], i[1], i[2], i[3] )
-    print(result)
+# for i in databases:
+#     # num = str(i[2])
+#     t =  "{}. {}  -  {} \t {}"
+#     result = t.format(i[0], i[1], i[2], i[3] )
+#     print(result)
 
 
 connection.commit() #push to database
