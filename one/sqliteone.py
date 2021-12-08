@@ -66,23 +66,23 @@ databases = c.fetchall()
 #     print("***" * 20)
 
 # ********************************************* 
-print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
-print("-----------------" + '\t-------------------')
+# print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
+# print("-----------------" + '\t-------------------')
 
-for i in databases:
-    num = str(i[2])
-    print(i[0] + "     " + i[1]  + "  \t\t" + num  )
+# for i in databases:
+#     num = str(i[2])
+#     print(i[0] + "     " + i[1]  + "  \t\t" + num  )
+
+
+
+# Primary keys 
+
+
 
 
 
 connection.commit() #push to database
 connection.close() # by default after running your programs you connection will close but its important to close connections by convention
-
-# creating table with single quotes 
-# 
-
-
-
 # types of datatypes
 # NULL doesnt exist
 # INTEGER a whole number
