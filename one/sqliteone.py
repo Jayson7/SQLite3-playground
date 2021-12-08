@@ -130,7 +130,7 @@ databases = c.fetchall()
 #     print(result)
 
 # more update
-c.execute("UPDATE   customersinfo SET first_name = 'geek' WHERE last_name= 'jayson' ")
+c.execute("UPDATE   customersinfo SET first_name = 'geek' WHERE rowid= 5 ")
 c.execute("SELECT rowid, * FROM    customersinfo")
 
 databases = c.fetchall()
