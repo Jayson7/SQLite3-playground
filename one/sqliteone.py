@@ -38,7 +38,7 @@ c = connection.cursor()
 
 
 # get all data **********************
-c.execute("SELECT * FROM    customersinfo")
+c.execute("SELECT rowid, * FROM    customersinfo")
 # print(c.fetchall())
 
 # fomat results using fetchone ********************
@@ -77,6 +77,14 @@ databases = c.fetchall()
 
 # Primary keys 
 
+print("NAME" + '\t LASTNAME ' + "\t PHONE NUMBER ")  
+print("-----------------" + '\t-------------------')
+
+for i in databases:
+    num = str(i[2])
+    t =  "{}. {}  -  {} \t {}"
+    result = t.format(i[0], i[1], i[2], i[3] )
+    print(result)
 
 
 
